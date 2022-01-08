@@ -34,7 +34,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         if (token!=null){
             CookieUtil.setCookie(request,response,"token",token,WebConst.COOKIE_MAXAGE,false);
         }
-        // 当用户访问非登录之后的页面，登录之后，继续访问其他业务模块时，url 并没有newToken，但是后台可能将token 放入了cookie 中！
+        // 当用户访问非登录之后的页面，登录之后，继续访问其他业务模块时，url并没有newToken，但是后台可能将token 放入了cookie 中！
         if (token==null){
             token = CookieUtil.getCookieValue(request,"token",false);
         }
@@ -84,6 +84,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                     String encodeURL  = URLEncoder.encode(requestURL, "UTF-8");
                     System.out.println("encodeURL："+encodeURL); //  http%3A%2F%2Fitem.gmall.com%2F36.html
                     // http://passport.atguigu.com/index?originUrl=http%3A%2F%2Fitem.gmall.com%2F36.html
+                    //重定向到登录界面
                     response.sendRedirect(WebConst.LOGIN_ADDRESS+"?originUrl="+encodeURL);
                     return false;
                 }
