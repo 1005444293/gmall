@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gware-manage" />
         <module name="gmall-web-util" />
         <module name="gmall-bean" />
         <module name="gmall-common-util" />
         <module name="gmall-manage-web" />
         <module name="gmall-manage-service" />
+        <module name="gmall-order-service" />
         <module name="fastdfs-client-java" />
         <module name="gmall-list-service" />
         <module name="gmall-list-web" />
@@ -37,12 +39,14 @@
       <module name="gmall-list-web" target="1.8" />
       <module name="gmall-manage-service" target="1.8" />
       <module name="gmall-manage-web" target="1.8" />
+      <module name="gmall-order-service" target="1.8" />
       <module name="gmall-order-web" target="1.8" />
       <module name="gmall-parent" target="1.8" />
       <module name="gmall-passport-web" target="1.8" />
       <module name="gmall-service-util" target="1.8" />
       <module name="gmall-user-manager" target="1.8" />
       <module name="gmall-web-util" target="1.8" />
+      <module name="gware-manage" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
